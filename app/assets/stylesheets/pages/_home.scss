@@ -42,6 +42,10 @@ body {
   font-weight: 300;
   background-color: #08090A; }
 
+
+.titlewebsite{
+  font-size: 1.5rem;
+}
 #universe {
   z-index: 1;
   position: absolute;
@@ -631,35 +635,35 @@ body {
 
 /* --------------------------------------------------------------------------- text infos data */
 /* --------------------------------------------------------------------------- speed */
-.set-speed dl.infos dd span:after {
-  content: 'Orbit Velocity'; }
+// .set-speed dl.infos dd span:after {
+//   content: 'Orbit Velocity'; }
 
 .set-speed #sun dl.infos dd:after {
-  content: '0 km/h'; }
+  content: 'Réserver'; }
 
 .set-speed #mercury dl.infos dd:after {
-  content: '170,503 km/h'; }
+  content: 'Réserver'; }
 
 .set-speed #venus dl.infos dd:after {
-  content: '126,074 km/h'; }
+  content: 'Réserver'; }
 
 .set-speed #earth dl.infos dd:after {
-  content: '107,218 km/h'; }
+  content: 'Réserver'; }
 
 .set-speed #mars dl.infos dd:after {
-  content: '86,677 km/h'; }
+  content: 'Réserver'; }
 
 .set-speed #jupiter dl.infos dd:after {
-  content: '47,002 km/h'; }
+  content: 'Réserver'; }
 
 .set-speed #saturn dl.infos dd:after {
-  content: '34,701 km/h'; }
+  content: 'Réserver'; }
 
 .set-speed #uranus dl.infos dd:after {
-  content: '24,477 km/h'; }
+  content: 'Réserver'; }
 
 .set-speed #neptune dl.infos dd:after {
-  content: '19,566 km/h'; }
+  content: 'Réserver'; }
 
 /* --------------------------------------------------------------------------- size */
 .set-size dl.infos dd span:after {

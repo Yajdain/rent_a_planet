@@ -1,9 +1,8 @@
-<h1>Pages#home</h1>
+<h1 class="titlewebsite">Rent your planet</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
   <body class="opening hide-UI view-2D zoom-large data-close controls-close">
     <div id="navbar">
       <a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>
-      <h1>3D Solar System<br><span>by <a href="https://twitter.com/JulianGarnier" target="_blank">@JulianGarnier</a></span></h1>
       <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controls</a>
     </div>
     <div id="data">
@@ -17,14 +16,14 @@
       <a class="uranus" title="uranus" href="#uranusspeed">Uranus</a>
       <a class="neptune" title="neptune" href="#neptunespeed">Neptune</a>
     </div>
-    <div id="controls">
+    <%# <div id="controls">
       <label class="set-view">
         <input type="checkbox">
       </label>
       <label class="set-zoom">
         <input type="checkbox">
-      </label>
-      <label>
+      </label> %>
+      <%# <label>
         <input type="radio" class="set-speed" name="scale" checked>
         <span>Speed</span>
       </label>
@@ -35,7 +34,7 @@
       <label>
         <input type="radio" class="set-distance" name="scale">
         <span>Distance</span>
-      </label>
+      </label> %>
     </div>
     <div id="universe" class="scale-stretched">
       <div id="galaxy">
