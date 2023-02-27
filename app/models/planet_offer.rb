@@ -1,0 +1,2 @@
+class PlanetOffer < ApplicationRecord
+end
