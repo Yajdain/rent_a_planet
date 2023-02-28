@@ -1,10 +1,19 @@
-<h1>Rent a planet</h1>
-
-<ul>
-<% @planetoffers.each do |planetoffer| %>
- <li><%= link_to planetoffer.name, planet_offer_path(planetoffer)%></li>
- <%= link_to "Delete",
-  planet_offer_path(planetoffer),
-  data: {turbo_method: :delete}%>
-<% end %>
-</ul>
+<h1 class="d-flex justify-content-center">Rent a planet</h1>
+<div class="container">
+  <div class="row">
+    <% @planetoffers.each do |planetoffer| %>
+    <div class="col-3 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="<%= planetoffer.planet_picture%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to planetoffer.name, planet_offer_path(planetoffer)%></h5>
+          <p class="card-text"><%= planetoffer.description %></p>
+          <div class="text-center">
+            <a href="#" class="btn btn-primary">Reserver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
