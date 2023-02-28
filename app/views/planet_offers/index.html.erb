@@ -1,10 +1,10 @@
 <h1>Rent a planet</h1>
 
 <ul>
-<% @planet_offers.each do |planet_offer| %>
- <li> <%= link_to planet_offer.name, planet_offer_path(planet_offer) %> </li>
+<% @planetoffers.each do |planetoffer| %>
+ <li><%= link_to planetoffer.name, planet_offer_path(planetoffer)%></li>
  <%= link_to "Delete",
-  planet_offer_path(planet_offer),
+  planet_offer_path(planetoffer),
   data: {turbo_method: :delete}%>
 <% end %>
 </ul>
