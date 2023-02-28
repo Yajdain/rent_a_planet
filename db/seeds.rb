@@ -2,10 +2,9 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
+
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
 planetoffer = PlanetOffer.create(
   name: "Terre",
   title: "La planète bleu",
@@ -75,7 +74,7 @@ planetoffer = PlanetOffer.create(
 
 planetoffer = PlanetOffer.create(
   name: "Mercure",
-  title: "La planète de l’intelligence",
+  title: "La planète de l'intelligence",
   description: "Gravité : 3,7 m/s²
   Superficie : 74,8 millions km²
   Rayon : 2439,7 km
