@@ -5,6 +5,9 @@ class PlanetOffersController < ApplicationController
     @planetoffers = PlanetOffer.all
   end
 
+  def show
+  end
+
   def create
     @planetoffer = PlanetOffer.new(planetoffer_params)
     @planetoffer.save
@@ -16,8 +19,8 @@ class PlanetOffersController < ApplicationController
     redirect_to planetoffer_path(@planetoffer)
   end
 
-  def edit; end
-  def show; end
+  def edit
+  end
 
   def destroy
     @planetoffer.destroy
