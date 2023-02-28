@@ -2,11 +2,11 @@ class PlanetOffersController < ApplicationController
   before_action :set_planetoffer, only: %i[show edit update destroy]
 
   def index
-    @planetoffers = Planetoffer.all
+    @planetoffers = PlanetOffer.all
   end
 
   def create
-    @planetoffer = Planetoffer.new(planetoffer_params)
+    @planetoffer = PlanetOffer.new(planetoffer_params)
     @planetoffer.save
     redirect_to planetoffers_path
   end
@@ -21,11 +21,11 @@ class PlanetOffersController < ApplicationController
 
   def destroy
     @planetoffer.destroy
-    redirect_to planetoffers_path, status: :see_other
+    redirect_to planet_offers_path, status: :see_other
   end
 
   def new
-    @planetoffer = Planetoffer.new
+    @planetoffer = PlanetOffer.new
   end
 
   private
@@ -35,6 +35,6 @@ class PlanetOffersController < ApplicationController
   end
 
   def set_planetoffer
-    @planetoffer = Planetoffer.find(params[:id])
+    @planetoffer = PlanetOffer.find(params[:id])
   end
 end
