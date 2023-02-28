@@ -1,14 +1,26 @@
 .card-radius{
   border-radius: 20px;
-  background-image: image-url("pexels-egil-sjholt-1906658.jpg");
-  background-size: cover;
+  background-color: #000000;
+  box-shadow: -4px 4px 4px 4px rgba($color: #FFFF, $alpha: 0.15);
+  border: solid white;
 }
 
 .backgroundcolor{
-  background-color: #2A272A;
+  background-image: image-url("pexels-felix-mittermeier-4644812.jpg");
+  background-size: cover;
 }
 
 .logo-size{
   width: 150px !important;
   height: 150px;
+}
+
+.text-deco{
+  text-decoration: none;
+  color: white;
+}
+
+.btn-color{
+  background-color: #ffff;
+  color: #ea7dff;
 }
