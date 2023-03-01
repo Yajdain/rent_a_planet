@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_28_101027) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_01_102700) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,14 +44,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_28_101027) do
 
   create_table "planet_offers", force: :cascade do |t|
     t.string "name"
-    t.text "description"
-    t.string "image"
     t.float "price"
     t.string "title"
     t.string "planet_picture"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "gravite"
+    t.float "superficie"
+    t.float "rayon"
   end
 
   create_table "reservations", force: :cascade do |t|
