@@ -10,13 +10,16 @@ class PlanetOffersController < ApplicationController
 
   def create
     @planetoffer = PlanetOffer.new(planetoffer_params)
-    @planetoffer.save
-    redirect_to planetoffers_path
+    if @planetoffer.save
+      redirect_to planet_offers_path(@planetoffer)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def update
     @planetoffer.update(planetoffer_params)
-    redirect_to planetoffer_path(@planetoffer)
+    redirect_to planet_offers_path(@planetoffer)
   end
 
   def edit
@@ -34,7 +37,7 @@ class PlanetOffersController < ApplicationController
   private
 
   def planetoffer_params
-    params.require(:planetoffer).permit(:title, :name, :price, :location, :gravite, :superficie, :rayon, :photo )
+    params.require(:planetoffer).permit(:name, :location, :superficie, :gravite, :rayon, :price, :title, :photo)
   end
 
   def set_planetoffer
