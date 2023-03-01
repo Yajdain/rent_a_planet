@@ -3,7 +3,9 @@
     <% @planetoffers.each do |planetoffer| %>
     <div class="col-3 mb-4">
       <div class="card card-radius-bg-bs h-100" style="width: 16rem;">
-        <img src="<%= planetoffer.photo %>" class="card-img-top rounded-circle text-light" alt="...">
+         <% if planetoffer.photo.attached? %>
+         <%= cl_image_tag planetoffer.photo.key, height: 300, width: 400, crop: :fill %>
+         <% end %>
         <div class="card-body">
           <h5 class="card-title text-center font-weight-bold"><%= link_to planetoffer.name, planet_offer_path(planetoffer), class: "text-deco"%></h5>
           <p class="card-text text-light text-center">Gravité : <%= planetoffer.gravite %> m/s²</p>
