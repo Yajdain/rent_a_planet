@@ -4,7 +4,7 @@
   <%= f.error_notification %>
   <%= f.full_error :confirmation_token %>
 
-  <div class="form-inputs">
+  <div class="form-inputs container text-deco text-light">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -12,8 +12,8 @@
                 input_html: { autocomplete: "email" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Resend confirmation instructions" %>
+  <div class="form-actions container text-deco text-light">
+    <%= f.button :submit, "Resend confirmation instructions", class: "btn btn-color" %>
   </div>
 <% end %>
 

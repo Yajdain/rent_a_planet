@@ -1,5 +1,26 @@
-<%= simple_form_for(@planetoffer) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photo, as: :file %>
-  <!-- [...] -->
-<% end %>
+<div class="container">
+  <div class="col">
+    <%= form_with model: @planetoffer do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+      <%= f.label :planet_picture %>
+      <%= f.text_field :planet_picture %>
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+      <%= f.label :gravite %>
+      <%= f.text_field :gravite %>
+      <%= f.label :superficie %>
+      <%= f.text_field :superficie %>
+      <%= f.label :rayon %>
+      <%= f.text_field :rayon %>
+      <%= f.submit %>
+    <% end %>
+    <%= simple_form_for(@planetoffer) do |f| %>
+      <!-- [...] -->
+      <%= f.input :photo, as: :file %>
+      <!-- [...] -->
+    <% end %>
+  </div>
+</div>
