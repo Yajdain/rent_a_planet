@@ -34,7 +34,7 @@ class PlanetOffersController < ApplicationController
   private
 
   def planetoffer_params
-    params.require(:planetoffer).permit(:title, :name, :description)
+    params.require(:planetoffer).permit(:title, :name, :price, :location, :gravite, :superficie, :rayon, :photo )
   end
 
   def set_planetoffer

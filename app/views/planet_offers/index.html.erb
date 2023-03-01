@@ -3,13 +3,16 @@
     <% @planetoffers.each do |planetoffer| %>
     <div class="col-3 mb-4">
       <div class="card card-radius-bg-bs h-100" style="width: 16rem;">
-        <img src="<%= planetoffer.planet_picture%>" class="card-img-top rounded-circle text-light" alt="...">
+        <img src="<%= planetoffer.photo %>" class="card-img-top rounded-circle text-light" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center font-weight-bold"><%= link_to planetoffer.name, planet_offer_path(planetoffer), class: "text-deco"%></h5>
-          <p class="card-text text-light text-center"><%= planetoffer.description %></p>
-          <p class="card-text text-light text-center"><%= planetoffer.price %>€</p>
+          <p class="card-text text-light text-center">Gravité : <%= planetoffer.gravite %> m/s²</p>
+          <p class="card-text text-light text-center">Superficie : <%= planetoffer.superficie %> M km²</p>
+          <p class="card-text text-light text-center">Rayon : <%= planetoffer.rayon %> km</p>
+          <p class="card-text text-light text-center">Localisation : <%= planetoffer.location %></p>
+          <p class="card-text text-light text-center">Prix : <%= planetoffer.price %> M €</p>
           <div class="text-center">
-            <a href="#" class="btn btn-color">Réserver</a>
+            <%= link_to "Réserver", new_planet_offer_path, class: "btn btn-color"%>
           </div>
         </div>
       </div>
