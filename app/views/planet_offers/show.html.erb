@@ -1,6 +1,10 @@
-<h2><%= @planetoffer.name %></h2>
-<p><%= @planetoffer.description %></p>
-<p><%= @planetoffer.price %></p>
-<p><%= @planetoffer.title %></p>
-<p><%= @planetoffer.location %></p>
-<p><%= @planetoffer.planet_picture %></p>
+<div class="container">
+  <div class="row justify-content-center">
+  <img src="<%= @planetoffer.planet_picture%>" class="rounded-circle border-cercle w-25 h-25" alt="...">
+    <h2 class="text-light"><%= @planetoffer.name %></h2>
+    <p class="text-light"><%= @planetoffer.description %></p>
+    <p class="text-light"><%= @planetoffer.price %>€</p>
+    <p class="text-light"><%= @planetoffer.title %></p>
+    <p class="text-light"><%= @planetoffer.location %></p>
+  </div>
+</div>
