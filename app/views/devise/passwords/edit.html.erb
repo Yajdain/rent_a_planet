@@ -6,7 +6,7 @@
   <%= f.input :reset_password_token, as: :hidden %>
   <%= f.full_error :reset_password_token %>
 
-  <div class="form-inputs container">
+  <div class="form-inputs container text-deco text-light">
     <%= f.input :password,
                 label: "New password",
                 required: true,
@@ -19,8 +19,8 @@
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-  <div class="form-actions container">
-    <%= f.button :submit, "Change my password" %>
+  <div class="form-actions container text-deco text-light">
+    <%= f.button :submit, "Change my password", class: "btn btn-color" %>
   </div>
 <% end %>
 
