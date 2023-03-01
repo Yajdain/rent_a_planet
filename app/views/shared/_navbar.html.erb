@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm bg-transparent navbar-lewagon">
-  <div class="container-fluid">
+  <div class="container-fluid ms-5 me-5">
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "galaxy-removebg-preview.png", class: "logo-size" %>
     <% end %>
@@ -27,7 +27,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link text-light" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link text-light fs-5" %>
           </li>
         <% end %>
       </ul>
