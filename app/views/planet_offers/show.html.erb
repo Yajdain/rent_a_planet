@@ -1,6 +1,8 @@
 <div class="container">
   <div class="row justify-content-center">
-  <img src="<%= @planetoffer.planet_picture%>" class="rounded-circle border-cercle w-25 h-25" alt="...">
+  <% if @planetoffer.photo.attached? %>
+    <%= cl_image_tag @planetoffer.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
     <h2 class="text-light text-center"><%= @planetoffer.name %></h2>
     <p class="card-text text-light text-center">Gravité : <%= @planetoffer.gravite %> m/s²</p>
     <p class="card-text text-light text-center">Superficie : <%= @planetoffer.superficie %> M km²</p>
