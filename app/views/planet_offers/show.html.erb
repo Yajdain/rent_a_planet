@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row justify-content-center">
   <img src="<%= @planetoffer.planet_picture%>" class="rounded-circle border-cercle w-25 h-25" alt="...">
-    <h2 class="text-light"><%= @planetoffer.name %></h2>
-    <p class="text-light"><%= @planetoffer.description %></p>
-    <p class="text-light"><%= @planetoffer.price %>€</p>
-    <p class="text-light"><%= @planetoffer.title %></p>
-    <p class="text-light"><%= @planetoffer.location %></p>
+    <h2 class="text-light text-center"><%= @planetoffer.name %></h2>
+    <p class="card-text text-light text-center">Gravité : <%= @planetoffer.gravite %> m/s²</p>
+    <p class="card-text text-light text-center">Superficie : <%= @planetoffer.superficie %> M km²</p>
+    <p class="card-text text-light text-center">Rayon : <%= @planetoffer.rayon %> km</p>
+    <p class="card-text text-light text-center">Prix : <%= @planetoffer.price %> M €</p>
   </div>
 </div>
