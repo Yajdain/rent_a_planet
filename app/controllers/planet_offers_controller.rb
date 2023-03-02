@@ -8,23 +8,15 @@ class PlanetOffersController < ApplicationController
   def show
   end
 
-  def new
-    @planetoffer = PlanetOffer.new
-  end
-
   def create
     @planetoffer = PlanetOffer.new(planet_offer_params)
-    @planetoffer.user = current_user
-    if @planetoffer.save
-      redirect_to planet_offers_path(@planetoffer)
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @planetoffer.save
+    redirect_to planet_offers_path
   end
 
   def update
     @planetoffer.update(planetoffer_params)
-    redirect_to planet_offers_path(@planetoffer)
+    redirect_to planet_offer_path(@planetoffer)
   end
 
   def edit
@@ -35,11 +27,14 @@ class PlanetOffersController < ApplicationController
     redirect_to planet_offers_path, status: :see_other
   end
 
+  def new
+    @planetoffer = PlanetOffer.new
+  end
 
   private
 
   def planet_offer_params
-    params.require(:planet_offer).permit(:name, :location, :superficie, :gravite, :rayon, :price, :title, :photo)
+    params.require(:planet_offer).permit(:title, :name, :price, :location, :gravite, :superficie, :rayon, :photo)
   end
 
   def set_planetoffer
