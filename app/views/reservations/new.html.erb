@@ -1,1 +1,9 @@
-<h1>pfhouguiyg</h1>
+<div class="container">
+  <div class="text-light">
+    <%= simple_form_for [@planet_offer, @reservation] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
