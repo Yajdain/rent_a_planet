@@ -19,6 +19,7 @@
             <i class="fa-solid fa-earth-europe text-light d-flex align-items-center fs-4"></i>
             <%= link_to " out", destroy_user_session_path, class: "dropdown-item nav-link text-light p-0 fs-4", data: {turbo_method: :delete} %>
           </li>
+         
           <li class="nav-item">
           <%= link_to pages_profile_path do %>
           <% if current_user.photo.attached? %>
