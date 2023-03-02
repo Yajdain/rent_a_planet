@@ -9,7 +9,7 @@ puts "Creating planets..."
 
 
 file_terre = URI.open("https://res.cloudinary.com/dyznng8zs/image/upload/v1677678080/terre_ye8ygo.jpg")
-terre = PlanetOffer.new(name: "Terre", title: "La planète bleue", price: 14.5, gravite: 9.80665, superficie: 510, rayon: 6_378.137, location: "149 millions km away from sun")
+terre = PlanetOffer.new(name: "Terre", title: "La planète bleue", price: 14.5, gravite: 9.80665, superficie: 510, rayon: 6_378.137, location: "149 millions km away from sun", user_id: 1)
 terre.photo.attach(io: file_terre, filename: "terre.jpg", content_type: "image/jpg")
 terre.save
 
