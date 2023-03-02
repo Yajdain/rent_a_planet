@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
   before_action :set_planetoffer, only: %i[destroy]
-  def index
-    @planetoffers = PlanetOffer.all.where("user_id = #{current_user.id}")
-  end
 
   def destroy
     @planetoffer.destroy
