@@ -81,3 +81,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "simple_calendar", "~> 1.1.0"
