@@ -1,13 +1,7 @@
-.card-radius-bg-bs{
-  border-radius: 20px;
-  background-color: #000000;
-  box-shadow: 4px 4px 4px 4px rgba($color: #FFFF, $alpha: 0.15);
-  border: 2px solid rgba(233, 125, 255, 0.896);
-}
-
 .backgroundcolor{
   background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)),image-url("20190418004804-6eeb8872.jpg");
   background-size: auto,cover;
+  display: block;
 }
 
 .logo-size{
@@ -21,23 +15,19 @@
 }
 
 .btn-color{
-  background-color: #ffff;
-  color: #ea7dff !important;
+  background-color:rgba(#82328a, 0.35)!important;
+  color: #ffff !important;
+  border-radius: 5px;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
 }
 
-
 .homepage{
-  margin-top: 280px;
+  margin-top: 10%;
   color: white;
   text-decoration: none !important;
   text-align: center;
-
 }
-
-.link-planets{
-  text-decoration: none !important;
-  color: #ea7dff;
- }
 
 .border-cercle{
   background-color: #000000;
@@ -51,5 +41,4 @@
 
 .object-fit{
   object-fit: contain;
-  border-radius: 50%;
 }
