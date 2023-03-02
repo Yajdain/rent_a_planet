@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Hello from the cosmos!</h1>
+  <h2>Please find all your planets below:</h2>
+  <div class="row justify-content-evenly ms-5 me-5">
+    <% @planetoffers.each do |planetoffer| %>
+      <div class="col-3 mb-4">
+        <div class="card card-radius-bg-bs h-100" style="width: 16rem;">
+          <% if planetoffer.photo.attached? %>
+          <%= cl_image_tag planetoffer.photo.key, height: 200, width: 200, crop: :fill, class: "margin-center" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold"><%= link_to planetoffer.name, planet_offer_path(planetoffer), class: "text-deco"%></h5>
+            <p class="card-text text-light text-center">Gravité : <%= planetoffer.gravite %> m/s²</p>
+            <p class="card-text text-light text-center">Superficie : <%= planetoffer.superficie %> M km²</p>
+            <p class="card-text text-light text-center">Rayon : <%= planetoffer.rayon %> km</p>
+            <p class="card-text text-light text-center">Localisation : <%= planetoffer.location %></p>
+            <p class="card-text text-light text-center">Prix : <%= planetoffer.price %> M €</p>
+            <div class="text-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>

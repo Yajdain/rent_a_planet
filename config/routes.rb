@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :reservations
   # Defines the root path route ("/")
   # root "articles#index"
+  get "/users", to: "users#index"
 end
