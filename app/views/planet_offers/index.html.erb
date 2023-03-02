@@ -10,7 +10,7 @@
         <h2 class="profile-username"><%= link_to planetoffer.name, planet_offer_path(planetoffer), class: "text-deco"%></h2>
         <small class="profile-user-handle">Prix : <%= planetoffer.price %> M €</small>
         <div class="profile-actions">
-          <button class="btn btn-color">Détails</button>
+          <button><%= link_to "Détails", planet_offer_path(planetoffer), class: "btn btn-color" %></button>
         </div>
       </article>
     <% end %>
