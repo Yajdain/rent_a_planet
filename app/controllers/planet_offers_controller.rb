@@ -10,6 +10,7 @@ class PlanetOffersController < ApplicationController
 
   def create
     @planetoffer = PlanetOffer.new(planet_offer_params)
+    @planetoffer.user = current_user
     @planetoffer.save
     redirect_to planet_offers_path
   end
