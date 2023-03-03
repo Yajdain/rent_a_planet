@@ -19,6 +19,7 @@ mars.photo.attach(io: file_mars, filename: "mars.jpg", content_type: "image/jpg"
 mars.save
 
 file_venus = URI.open("https://res.cloudinary.com/dyznng8zs/image/upload/v1677678111/Venus_pv3j68.jpg")
+
 venus = PlanetOffer.new(name: "Venus", title: "La planète de l'amour", price: 10.2,  gravite: 8.87, superficie: 460.2, rayon: 6_051.8, location: "108 M km away from sun", user: user1 )
 venus.photo.attach(io: file_venus, filename: "venus.jpg", content_type: "image/jpg")
 venus.save
