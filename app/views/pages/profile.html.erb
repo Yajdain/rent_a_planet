@@ -1,34 +1,34 @@
 <div class="container">
   <div class="row justify-content-evenly ms-5 me-5">
-    <h2 class="text-light">We've listed all of your bookings below:</h2>
+    <h2 class="text-light mb-5">We've listed all of your bookings below:</h2>
     <% @reservations.each do |reservation| %>
       <div class="profile col-6 mb-4 ms-4 me-4">
         <div class="card-body">
-          <p class="card-text text-light text-center">Destination : <br> <%= reservation.planet_offer.name %></p>
-          <p class="card-text text-light text-center">Day of arrival : <br> <%= reservation.start_date %> </p>
-          <p class="card-text text-light text-center">Day of check-out : <br> <%= reservation.end_date %> </p>
-          <p class="card-text text-light text-center">Number of days : <br> <%= (reservation.end_date - reservation.start_date).to_i %></p>
-          <p class="card-text text-light text-center">Number of voyagers : <br> <%= reservation.voyagers %> </p>
-          <p class="card-text text-light text-center">Sum : <br> <%= reservation.planet_offer.price*(reservation.end_date - reservation.start_date).to_i %> M€</p>
+          <p class="card-text text-light text-center"><strong>Destination :</strong> <br> <%= reservation.planet_offer.name %></p>
+          <p class="card-text text-light text-center"><strong>Day of arrival :</strong> <br> <%= reservation.start_date %> </p>
+          <p class="card-text text-light text-center"><strong>Day of check-out :</strong> <br> <%= reservation.end_date %> </p>
+          <p class="card-text text-light text-center"><strong>Number of days :</strong> <br> <%= (reservation.end_date - reservation.start_date).to_i %></p>
+          <p class="card-text text-light text-center"><strong>Number of voyagers : </strong><br> <%= reservation.voyagers %> </p>
+          <p class="card-text text-light text-center"><strong>Total price :</strong> <br> <%= reservation.planet_offer.price*(reservation.end_date - reservation.start_date).to_i %> M€</p>
         </div>
       </div>
     <% end %>
   </div>
 
   <div class="row justify-content-evenly ms-5 me-5">
-    <h2 class="text-light">We've listed all of your planet below:</h2>
+    <h2 class="text-light mb-5">We've listed all of your planet below:</h2>
     <% @planetoffers.each do |planetoffer| %>
       <div class="profile col-6 mb-4 ms-4 me-4">
         <% if planetoffer.photo.attached? %>
         <%= cl_image_tag planetoffer.photo.key, height: 200, width: 200, crop: :fill, class: "margin-center" %>
         <% end %>
         <div class="card-body">
-          <h5 class="card-title text-center font-weight-bold"><%= link_to planetoffer.name, planet_offer_path(planetoffer), class: "text-deco"%></h5>
-          <p class="card-text text-light text-center">Gravité : <%= planetoffer.gravite %> m/s²</p>
-          <p class="card-text text-light text-center">Superficie : <%= planetoffer.superficie %> M km²</p>
-          <p class="card-text text-light text-center">Rayon : <%= planetoffer.rayon %> km</p>
-          <p class="card-text text-light text-center">Localisation : <%= planetoffer.location %></p>
-          <p class="card-text text-light text-center">Prix : <%= planetoffer.price %> M €</p>
+          <h5 class="card-title text-center font-weight-bold mb-3"><%= link_to planetoffer.name, planet_offer_path(planetoffer), class: "text-deco"%></h5>
+          <p class="card-text text-light text-center"><strong>Gravité :</strong> <%= planetoffer.gravite %> m/s²</p>
+          <p class="card-text text-light text-center"><strong>Superficie :</strong> <%= planetoffer.superficie %> M km²</p>
+          <p class="card-text text-light text-center"><strong>Rayon :</strong> <%= planetoffer.rayon %> km</p>
+          <p class="card-text text-light text-center"><strong>Localisation :</strong> <%= planetoffer.location %></p>
+          <p class="card-text text-light text-center"><strong>Prix :</strong> <%= planetoffer.price %> M €</p>
           <div class="text-center">
           </div>
         </div>
