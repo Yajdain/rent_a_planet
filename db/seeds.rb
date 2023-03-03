@@ -9,9 +9,9 @@ PlanetOffer.destroy_all
 User.destroy_all
 
 
-puts "Creating planets..."
+puts "Creating planets, users, and reservations"
 
-user1 = User.create(email: "toto@gmail.com", password: "tototo")
+user1 = User.create(email: "toto@gmail.com", password: "tototo", first_name: "toto", last_name: "titi", age: "30")
 
 file_terre = URI.open("https://res.cloudinary.com/dyznng8zs/image/upload/v1677678080/terre_ye8ygo.jpg")
 terre = PlanetOffer.new(name: "Terre", title: "La planète bleue", price: 14.5, gravite: 9.80665, superficie: 510, rayon: 6_378.137, location: "149 millions km away from sun", user: user1)
@@ -49,4 +49,5 @@ mercure = PlanetOffer.new(name: "Mercure", title: "La planète de l'intelligence
 mercure.photo.attach(io: file_mercure, filename: "mercure.jpg", content_type: "image/jpg")
 mercure.save
 
+reservation1 = Reservation.create(start_date: Date.new(2023,04,10), end_date: Date.new(2023,04,29), user: user1, planet_offer: terre)
 puts 'Finished!'
