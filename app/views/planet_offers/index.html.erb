@@ -2,19 +2,21 @@
   <div class="row justify-content-evenly ms-5 me-5">
     <% @planetoffers.each do |planetoffer| %>
       <div class="profile col-6 mb-4 ms-4 me-4 ">
-            <% if planetoffer.photo.attached? %>
-            <%= cl_image_tag planetoffer.photo.key, height: 200, width: 200, crop: :fill, class: "margin-center profile-image" %>
-            <% end %>
-            <div class="card-body">
-              <h5 class="card-title text-center font-weight-bold mt-3"><%= link_to planetoffer.name, planet_offer_path(planetoffer), class: "text-deco"%></h5>
-              <p class="card-text text-light text-center  mt-3">Gravité : <%= planetoffer.gravite %> m/s²</p>
-              <p class="card-text text-light text-center">Superficie : <%= planetoffer.superficie %> M km²</p>
-              <p class="card-text text-light text-center">Rayon : <%= planetoffer.rayon %> km</p>
-              <p class="card-text text-light text-center">Localisation : <%= planetoffer.location %></p>
-              <p class="card-text text-light text-center">Prix : <%= planetoffer.price %> M €</p>
-              <div class="text-center">
-              </div>
+        <a href="<%= planet_offer_path(planetoffer)%>">
+          <% if planetoffer.photo.attached? %>
+          <%= cl_image_tag planetoffer.photo.key, height: 200, width: 200, crop: :fill, class: "margin-center profile-image" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold mt-3"><%= link_to planetoffer.name, planet_offer_path(planetoffer), class: "text-deco"%></h5>
+            <p class="card-text text-light text-center  mt-3">Gravité : <%= planetoffer.gravite %> m/s²</p>
+            <p class="card-text text-light text-center">Superficie : <%= planetoffer.superficie %> M km²</p>
+            <p class="card-text text-light text-center">Rayon : <%= planetoffer.rayon %> km</p>
+            <p class="card-text text-light text-center">Localisation : <%= planetoffer.location %></p>
+            <p class="card-text text-light text-center">Prix : <%= planetoffer.price %> M €</p>
+            <div class="text-center">
             </div>
+          </div>
+        </a>
       </div>
     <% end %>
   </div>
