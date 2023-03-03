@@ -43,7 +43,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:validated, :start_date, :end_date)
+    params.require(:reservation).permit(:validated, :start_date, :end_date, :voyagers)
   end
 
   # def set_reservation
