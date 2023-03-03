@@ -14,8 +14,11 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
     @reservation.planet_offer = @planet_offer
-    @reservation.save
-    redirect_to root_path
+    if @reservation.save
+      redirect_to pages_profile_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def update
