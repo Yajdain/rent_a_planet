@@ -11,16 +11,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item d-flex">
-            <%= link_to "L", destroy_user_session_path, class: "dropdown-item nav-link text-light p-0 fs-4", data: {turbo_method: :delete} %>
-            <i class="fa-solid fa-earth-europe text-light d-flex align-items-center fs-4"></i>
-            <%= link_to "g out", destroy_user_session_path, class: "dropdown-item nav-link text-light p-0 fs-4 me-3", data: {turbo_method: :delete} %>
-          </li>
-
-          <li class="nav-item">
+          <div>
+            <%= link_to new_planet_offer_path do %>
+            <i class="fa-solid fa-globe text-light color-icon-add">+</i>
+            <% end %>
+          </div>
+          <div>
+            <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
+            <p>L<i class="fa-solid fa-earth-europe text-light fs-4"></i>g out</p>
+            <% end %>
+          </div>
+          <li class="nav-item p-3">
           <%= link_to pages_profile_path do %>
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar"%>
