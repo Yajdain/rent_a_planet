@@ -11,8 +11,11 @@ class PlanetOffersController < ApplicationController
   def create
     @planetoffer = PlanetOffer.new(planet_offer_params)
     @planetoffer.user = current_user
-    @planetoffer.save
-    redirect_to planet_offers_path
+    if @planetoffer.save
+      redirect_to planet_offers_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def update
