@@ -11,14 +11,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <div>
+          <div class="d-flex text-deco:hover p-4">
             <%= link_to new_planet_offer_path do %>
-            <i class="fa-solid fa-globe text-light color-icon-add">+</i>
+            <i class="fa-solid fa-globe position-relative text-deco color-icon-add pt-2 fs-3"></i>
             <% end %>
           </div>
-          <div>
-            <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
-            <p>L<i class="fa-solid fa-earth-europe text-light fs-4"></i>g out</p>
+          <div class="text-deco :hover p-4">
+            <%= link_to destroy_user_session_path, class:"text-deco", data: {turbo_method: :delete} do %>
+            <p class="text-light fs-3">L<i class="fa-solid fa-earth-europe fs-4"></i>g out</p>
             <% end %>
           </div>
           <li class="nav-item p-3">
@@ -31,11 +31,11 @@
           </li>
           <% end %>
         <% else %>
-          <li class="nav-item d-flex">
-            <%= link_to "L", new_user_session_path, class: "nav-link text-light p-0 fs-4" %>
-            <i class="fa-solid fa-earth-europe text-light d-flex align-items-center fs-4"></i>
-            <%= link_to "g in", new_user_session_path, class: "nav-link text-light p-0 fs-4 me-3" %>
-          </li>
+          <div class="text-deco :hover p-4">
+            <%= link_to new_user_session_path, class:"text-deco" do %>
+            <p class="text-light fs-3">L<i class="fa-solid fa-earth-europe fs-4"></i>g in</p>
+            <% end %>
+          </div>
         <% end %>
       </ul>
     </div>
