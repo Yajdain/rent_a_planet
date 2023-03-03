@@ -49,5 +49,5 @@ mercure = PlanetOffer.new(name: "Mercure", title: "La planète de l'intelligence
 mercure.photo.attach(io: file_mercure, filename: "mercure.jpg", content_type: "image/jpg")
 mercure.save
 
-reservation1 = Reservation.create(start_date: Date.new(2023,04,10), end_date: Date.new(2023,04,29), user: user1, planet_offer: terre)
+reservation1 = Reservation.create(start_date: Date.new(2023,04,10), end_date: Date.new(2023,04,29), user: user1, planet_offer: terre, voyagers: 12)
 puts 'Finished!'

@@ -3,6 +3,7 @@
     <%= simple_form_for [@planet_offer, @reservation] do |f| %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
+      <%= f.input :voyagers, collection: Reservation::VOYAGERS %>
       <%= f.submit %>
     <% end %>
   </div>
